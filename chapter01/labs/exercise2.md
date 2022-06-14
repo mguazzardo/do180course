@@ -1,6 +1,8 @@
 Primero corremos el nginx.  
 
 Para correrlo, aseguremosno que no tenemos corriendo el contenedor, y sino lo hacemos con el siguiente comando
+
+
 `podman run -d --name nginx -p 8080:80  docker.io/library/nginx`
 
 Luego creamos este directorio para almacenar las configuraciones
