@@ -31,3 +31,82 @@ registry.centos.org/centos/mysql-57-centos7  latest        8be37f2e9de0  2 years
 registry.fedoraproject.org/f29/httpd         latest        25c76f9dcdb5  3 years ago    482 MB
 docker.io/library/mysql                      5.7.17        9546ca122d3a  5 years ago    414 MB
 ```
+
+Generalmente, y por defecto, el tag apunta a latest. Pero no es que sea asi siempre.
+
+#Viendo las tags existentes de una misma imagen.
+
+Para esto, necesitamos tener en mente otra que se llama skopeo.
+Por si no la tenemos instalada.
+
+```
+[devops@podman images-tag]$ sudo yum -y install skopeo
+Last metadata expiration check: 0:27:02 ago on Sun 04 Sep 2022 07:03:27 PM -03.
+Dependencies resolved.
+==================================================================================================================================
+ Package               Architecture          Version                                               Repository                Size
+==================================================================================================================================
+Installing:
+ skopeo                x86_64                2:1.9.2-1.module_el8.7.0+1196+721f4eb0                appstream                6.8 M
+
+Transaction Summary
+==================================================================================================================================
+Install  1 Package
+
+Total download size: 6.8 M
+Installed size: 22 M
+Downloading Packages:
+```
+
+Y ahora hacemos la busqueda de los tags, por ejemplo de mongodb
+
+```
+skopeo inspect docker://docker.io/library/mongo
+{
+    "Name": "docker.io/library/mongo",
+    "Digest": "sha256:2b527cb8eafb4a97a896eb05a2e88c75f0033d4be4bf94fad205299659147c13",
+    "RepoTags": [
+        "2",
+        "2.2",
+        "2.2.7",
+        "2.4",
+        "2.4.10",
+        "2.4.11",
+        "2.4.12",
+```
+
+
+#Inspeccionando las Imagenes bajadas
+
+
+```
+[
+     {
+          "Id": "2b7d6430f78d432f89109b29d88d4c36c868cdbf15dc31d2132ceaa02b993763",
+          "Digest": "sha256:b95a99feebf7797479e0c5eb5ec0bdfa5d9f504bc94da550c2f58e839ea6914f",
+          "RepoTags": [
+               "docker.io/library/nginx:latest"
+          ],
+          "RepoDigests": [
+               "docker.io/library/nginx@sha256:89020cd33be2767f3f894484b8dd77bc2e5a1ccc864350b92c53262213257dfc",
+               "docker.io/library/nginx@sha256:b95a99feebf7797479e0c5eb5ec0bdfa5d9f504bc94da550c2f58e839ea6914f"
+          ],
+          "Parent": "",
+          "Comment": "",
+          "Created": "2022-08-23T03:59:02.789512663Z",
+          "Config": {
+               "ExposedPorts": {
+                    "80/tcp": {}
+               },
+               "Env": [
+                    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                    "NGINX_VERSION=1.23.1",
+                    "NJS_VERSION=0.7.6",
+                    "PKG_RELEASE=1~bullseye"
+               ],
+               "Entrypoint": [
+                    "/docker-entrypoint.sh"
+```
+
+
+
