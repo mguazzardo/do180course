@@ -109,5 +109,40 @@ podman inspect nginx:latest
                     "/docker-entrypoint.sh"
 ```
 
+### Revisando otras Imagenes
+
+Ahora veremos por ejemplo, como revisar otras Imagenes, como podrian ser las Imagenes de centos.
+
+
+```
+skopeo inspect docker://docker.io/library/centos
+{
+    "Name": "docker.io/library/centos",
+    "Digest": "sha256:a27fd8080b517143cbbbab9dfb7c8571c40d67d534bbdee55bd6c473f432b177",
+    "RepoTags": [
+        "5",
+        "5.11",
+        "6",
+        "6.10",
+        "6.6",
+        "6.7",
+        "6.8",
+        "6.9",
+        "7",
+        "7.0.1406",
+        "7.1.1503",
+        "7.2.1511",
+        "7.3.1611",
+        "7.4.1708",
+        "7.5.1804",
+        "7.6.1810",
+        "7.7.1908",
+        "7.8.2003",
+        "7.9.2009",
+        "8",
+        "8.1.1911",
+        "8.2.2004",
+        "8.3.2011",
+```
 
 
