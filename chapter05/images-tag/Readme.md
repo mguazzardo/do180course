@@ -34,7 +34,7 @@ docker.io/library/mysql                      5.7.17        9546ca122d3a  5 years
 
 Generalmente, y por defecto, el tag apunta a latest. Pero no es que sea asi siempre.
 
-#Viendo las tags existentes de una misma imagen.
+### Viendo las tags existentes de una misma imagen.
 
 Para esto, necesitamos tener en mente otra que se llama skopeo.
 Por si no la tenemos instalada.
@@ -76,7 +76,7 @@ skopeo inspect docker://docker.io/library/mongo
 ```
 
 
-#Inspeccionando las Imagenes bajadas
+### Inspeccionando las Imagenes bajadas
 
 
 ```
