@@ -80,6 +80,7 @@ skopeo inspect docker://docker.io/library/mongo
 
 
 ```
+podman inspect nginx:latest
 [
      {
           "Id": "2b7d6430f78d432f89109b29d88d4c36c868cdbf15dc31d2132ceaa02b993763",
