@@ -7,7 +7,7 @@ es lo que nos permite llevar mejor las versiones.
 
 Por ejemplo, version v1, v0.2 , v0.3
 
-´´´
+```
 [devops@podman do180course]$ podman images
 REPOSITORY                                   TAG           IMAGE ID      CREATED        SIZE
 localhost/mysql-populated                    latest        625cf5d178f7  4 days ago     414 MB
@@ -30,4 +30,4 @@ docker.io/library/php                        8.0.0-apache  e97a1581dd75  21 mont
 registry.centos.org/centos/mysql-57-centos7  latest        8be37f2e9de0  2 years ago    467 MB
 registry.fedoraproject.org/f29/httpd         latest        25c76f9dcdb5  3 years ago    482 MB
 docker.io/library/mysql                      5.7.17        9546ca122d3a  5 years ago    414 MB
-´´´´
+```
