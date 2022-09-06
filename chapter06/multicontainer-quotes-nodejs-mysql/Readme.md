@@ -29,7 +29,7 @@ nohup oc port-forward <POD> 3306:3306 &
 Populamos la base para las quotes
 
 ```
-mysql -u user1 -pmaster -h 127.0.0.1 < init.sql
+mysql -u user1 -pmaster -h 127.0.0.1 sampledb < init.sql
 
 ```
 
