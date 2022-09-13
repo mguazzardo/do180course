@@ -1,0 +1,8 @@
+podman run -d -p 3306:3306 quay.io/fatherlinux/linux-container-internals-2-0-introduction
+
+
+
+
+
+
+
