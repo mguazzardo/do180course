@@ -22,7 +22,7 @@ Tenemos esta imagen, pero ahora lo que queremos hacer es ver que hay, como es un
 y la extreamos
 
 ```
-mkdir do-quote180 && mv do180-quote-php.tar do180-quote-php && cd do180-quote-php && tar xpf do180-quote-php.tar
+mkdir do180-quote-php && mv do180-quote-php.tar do180-quote-php && cd do180-quote-php && tar xpf do180-quote-php.tar
 ````
 
 Tiramos un ls 
