@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV env_name John
+ENV env_name Marcelo 
 
 COPY greetings.sh .
 
